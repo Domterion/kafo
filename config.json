@@ -1,5 +1,6 @@
 {
-    "path": "C:\\Users\\tasty\\Downloads",
+    "path": "C:/Users/tasty/Downloads",
+    "make_folders": true,
     "delay": 2,
     "dirs": [{
         "name": "Documents",

@@ -6,6 +6,7 @@ use serde::{Deserialize, Serialize};
 pub struct Config {
     pub path: String,
     pub delay: u64,
+    pub make_folders: bool,
     pub dirs: Vec<Dirs>,
 }
 
