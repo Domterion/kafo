@@ -2,6 +2,8 @@ use std::fs;
 use std::panic;
 use std::path::Path;
 
+use colored::*;
+
 mod file_watcher;
 use file_watcher::FileWatcher;
 
@@ -12,21 +14,24 @@ fn main() {
     let config = Config::new();
 
     if config.make_folders {
-        println!("Making folders.");
-        println!("----------------");
+        println!("{}", "Making folders.".green().bold());
         for i in &config.dirs {
             let dir = format!("{}/{}", config.path, i.name);
 
             if Path::new(&dir).exists() {
-                println!("{} already exists, skipping!", i.name);
+                println!(
+                    "{}{}",
+                    i.name.red().bold(),
+                    " already exists, skipping!".red()
+                );
                 continue;
             }
 
             fs::create_dir(&dir).expect(&format!("Err when making folder {}", i.name));
+            println!("{}{}", i.name.green().bold(), " was made".green());
             println!("Made {} folder.", i.name)
         }
-        println!("----------------");
-        println!("Done making folders.")
+        println!("{}", "Done making folders.".green().bold());
     }
 
     let fw = FileWatcher::new(config);
