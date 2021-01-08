@@ -20,7 +20,7 @@ fn main() {
 
             if Path::new(&dir).exists() {
                 println!(
-                    "{}{}",
+                    "[x] {}{}",
                     i.name.red().bold(),
                     " already exists, skipping!".red()
                 );
@@ -37,6 +37,6 @@ fn main() {
     let fw = FileWatcher::new(config);
 
     if let Err(e) = fw.watch() {
-        println!("Err: {:?}", e)
+        println!("[x] {}{:?}", "Err: ".red(), e.to_string().red().bold())
     }
 }

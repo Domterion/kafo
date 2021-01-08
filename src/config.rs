@@ -1,3 +1,4 @@
+use colored::*;
 use std::fs;
 
 use serde::{Deserialize, Serialize};
@@ -19,10 +20,13 @@ pub struct Dirs {
 impl Config {
     pub fn new() -> Self {
         let config = "config.json";
-        let contents = fs::read_to_string(config).expect("Failed to read config.");
+        let contents =
+            fs::read_to_string(config).expect(&format!("[x] {}", "Failed to read config.".red()));
 
-        let config: Config =
-            serde_json::from_str(&contents).expect("Improper json formatting in config.");
+        let config: Config = serde_json::from_str(&contents).expect(&format!(
+            "[x] {}",
+            "Improper json formatting in config.".red()
+        ));
 
         return config;
     }
