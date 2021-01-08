@@ -1,0 +1,11 @@
+{
+    "path": "C:\\Users\\tasty\\Downloads",
+    "delay": 2,
+    "dirs": [{
+        "name": "Documents",
+        "exts": ["txt"]
+    }, {
+        "name": "Images",
+        "exts": ["png", "svg"]
+    }]
+}
