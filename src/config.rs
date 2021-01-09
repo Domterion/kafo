@@ -8,6 +8,7 @@ pub struct Config {
     pub path: String,
     pub delay: u64,
     pub make_folders: bool,
+    pub move_existing: bool,
     pub dirs: Vec<Dirs>,
 }
 

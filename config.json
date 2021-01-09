@@ -1,12 +1,25 @@
 {
     "path": "C:/Users/tasty/Downloads",
     "make_folders": true,
+    "move_existing": true,
     "delay": 2,
     "dirs": [{
         "name": "Documents",
-        "exts": ["txt"]
+        "exts": ["txt", "pdf", "pptx", "rtf"]
     }, {
         "name": "Images",
         "exts": ["png", "svg"]
+    }, {
+        "name": "Applications",
+        "exts": ["exe", "jar", "msi"]
+    }, {
+        "name": "Video",
+        "exts": ["mp4", "webm"]
+    }, {
+        "name": "Archives",
+        "exts": ["zip", "rar"]
+    }, {
+        "name": "Audio",
+        "exts": ["ogg"]
     }]
 }

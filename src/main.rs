@@ -29,7 +29,6 @@ fn main() {
 
             fs::create_dir(&dir).expect(&format!("Err when making folder {}", i.name));
             println!("{}{}", i.name.green().bold(), " was made".green());
-            println!("Made {} folder.", i.name)
         }
         println!("{}", "Done making folders.".green().bold());
     }
