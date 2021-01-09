@@ -5,7 +5,7 @@
     "delay": 2,
     "dirs": [{
         "name": "Documents",
-        "exts": ["txt", "pdf", "pptx", "rtf"]
+        "exts": ["txt", "pdf", "pptx", "rtf", "ahk"]
     }, {
         "name": "Images",
         "exts": ["png", "svg"]
